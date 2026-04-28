@@ -11,13 +11,11 @@
     </style>
 </head>
 <body>
-
     <h1>Listado de Instituciones</h1>
-    <hr> <div id="mensajeFinal"></div>
-
+    <div id="mensajeFinal"></div>
     <script>
         $(document).ready(function() {
-            var url = "data_instituciones.json";
+            var url = "https://raw.githubusercontent.com/taw-desarrollo-plataformas-web/oers/refs/heads/main/data_instituciones.json";
 
             $.getJSON(url, function(data) {
                 $.each(data, function(i, item) {
