@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <title>Consumir JSON Instituciones</title>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <style>
+        body { font-family: sans-serif; padding: 20px; }
+        .separador { margin-bottom: 25px; } 
+        p { margin: 5px 0; }
+    </style>
+</head>
+<body>
+
+    <h1>Listado de Instituciones</h1>
+    <hr> <div id="mensajeFinal"></div>
+
+    <script>
+        $(document).ready(function() {
+            var url = "data_instituciones.json";
+
+            $.getJSON(url, function(data) {
+                $.each(data, function(i, item) {
+                    $("#mensajeFinal").append(
+                        "<div class='separador'>" +
+                            "<p>1. Nombre: " + item['Nombre-Educativa'] + "</p>" +
+                            "<p>2. Provincia: " + item.Provincia + "</p>" +
+                            "<p>3. Cantón: " + item.Canton + "</p>" +
+                            "<p>4. Sostenimiento: " + item.Sostenimiento + "</p>" +
+                            "<p>5. Modalidad: " + item.Modalidad + "</p>" +
+                        "</div>"
+                    );
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
