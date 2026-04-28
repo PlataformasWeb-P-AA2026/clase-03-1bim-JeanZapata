@@ -4,9 +4,9 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>Demo Jquery y JqueryUI</title>
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="jquery-ui.css">
+    <script src="jquery-3.5.0.js.js"></script>
+    <script src="jquery-ui.js.js"></script>
   </head>
   <body>
       <h2>Ejemplo de Uso de jQuery y jQueryUI</h2>
@@ -29,8 +29,6 @@
         <div>
           <p id="mensajeFinal3"></p>
         </div>
-
-
       </div>
   </body>
   <script>  
@@ -41,13 +39,9 @@
       $( "button" ).click(function() {
         var texto1 = $('#nombreCarrera').text();
         var texto2 = $('#nombreUniversidad').text();
-        $('#mensajeFinal').text("Su carrera es: "+ texto1 + ". Su universidad es "
-          + texto2);
-        $('#mensajeFinal2').text("Su carrera es: "+ texto1 + ". Su universidad es "
-          + texto2);
-        $('#mensajeFinal3').text("Su carrera es: "+ texto1 + ". Su universidad es "
-          + texto2);
-        console.log(texto1);
+        $('#mensajeFinal').text("Su carrera es: "+ texto1 + ". Su universidad es " + texto2);
+        $('#mensajeFinal2').text("Su carrera es: "+ texto1 + ". Su universidad es " + texto2);
+        $('#mensajeFinal3').text("Su carrera es: "+ texto1 + ". Su universidad es " + texto2);
       });
     });
   </script>

@@ -8,9 +8,9 @@
   </head>
   <body>
       <h1>Ejemplo de Uso de Jquery</h1>
-      <p id="mensajeFinal">
-      </p>
-      <button type=”submit”>Obtener información</button>
+      <div id="mensajeFinal">
+      </div>
+      <button type="submit">Obtener información</button>
   </body>
   <script>
     $(document).ready(function() {
@@ -21,12 +21,12 @@
               dataType: 'json',
               url: url
             }).then(function(data) {
-
+              var lista = "<ul>";
               for(var i=0; i<data.length; i++){
-                console.log(data[i]);
-                console.log(data[i].Code);
-                console.log(data[i].Name);
+                lista += "<li>" + data[i].Code + " - " + data[i].Name + "</li>";
               }
+              lista += "</ul>";
+              $('#mensajeFinal').html(lista);
             })
       });
     });
